@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interact</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Merienda:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/Interact.png">
+    
+</head>
+<body>
+    <div>
+        <h1 class="name">Interact</h1>
+    </div>
+    <div class="login-box">
+        <h2 class="frndo "> Hello <span id="hello"></span>, <br> You want my contacts ? Here you go !</h2>
+
+        <a class="linkholder" href="https://www.facebook.com/lyfwithmimo" target="_blank"><img src="/img/facebook_logo.png" alt="facebook" class="image"></a>
+        <a class="linkholder" href="https://www.instagram.com/lyfwithmimo/" target="_blank"><img src="/img/instagram_logo.png" alt="instagram" class="image"></a>
+        <a class="linkholder" href="https://www.linkedin.com/in/soudeepanbiswas/" target="_blank"><img src="/img/linkedin_logo.png" alt="linkedin" class="image"></a>
+        <a class="linkholder" href="mailto:soudeepanbiswas@gmail.com" target="_blank"><img src="/img/gmail_logo.png" alt="facebook" class="image extra"></a>
+
+        <form>     
+          <br><br><br><br>
+
+          <div class="user-box" id="space" >
+            <input type="password" id="password" required="" autocomplete="off">
+            <label>Password</label>
+          </div>
+
+
+          <a  class="asap" href="#"  onclick="checkPassword()">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Check
+          </a>
+        </form>
+      </div>
+      <script src=" https://smtpjs.com/v3/smtp.js"></script>
+      <script>
+
+        var name = localStorage.getItem("name");
+
+        document.getElementById("hello").innerHTML = name;
+
+
+        function checkPassword(){
+
+          var password = document.getElementById("password").value;
+
+          var actualPassword = "Thank_You_For_Interacting_With_Me";
+
+      
+
+          if(password == actualPassword){
+
+            document.location.href = "/congo.html";
+          }
+          else{
+            alert("Wrong password ! Don't try to cheat "+name);
+          }
+
+        }
+      </script>
+</body>
+</html>
+
+
